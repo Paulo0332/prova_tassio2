@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feijao com açucar</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='geral.css')}}">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Reportagems</h1>
+
+        {% for reportagem in lista_reportagem %}
+
+            <section id="classe-{{reportagem.get_id()}}">
+                <h1>Nome: {{reportagem.get_nome()}} </h1>
+                <p>Genero artistico: {{reportagem.get_reportagens()}} </p>
+                <a href="{{url_for('detalhe', id=reportagem.get_id())}}">Ver detalhes</a>
+            </section>
+
+        {% endfor %}
+    </div>
+
+</body>
+</html>

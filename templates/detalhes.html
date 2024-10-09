@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='geral.css')}}">
+</head>
+<body>
+    <div class="container">
+        <section id="{{reportagem.get_id()}}">
+            <h1>{{reportagem.get_nome()}} </h1>
+            <p>{{reportagem.get_resumo()}} </p>
+            <img id="img-reportagens" src="{{ url_for('static', filename=reportagem.get_imagem()) }}" alt="">
+            <p>{{reportagem.get_reporternome()}} </p>
+            <img id="img-reportagens" src="{{ url_for('static', filename=reportagem.get_foto_jornalista()) }}" style="width: 150px;">
+        </section>
+        
+    <div>
+    
+</body>
+</html>

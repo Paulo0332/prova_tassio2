@@ -1,0 +1,12 @@
+.container{
+    text-align: center;
+}
+
+body{
+    background-color: aquamarine;
+}
+
+
+.container img{
+    width: 50%;
+}
